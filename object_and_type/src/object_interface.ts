@@ -36,3 +36,25 @@ interface IPerson2 {
 }
 let good1: IPerson2 = { name: "Jack", age: 32 };
 let good2: IPerson2 = { name: "Jack", age: 32, etc: true };
+
+/*
+ *  익명 인터페이스
+ */
+
+// interface 키워드와 이름을 정하지 않고 만드는 인터페이스
+
+let ai: {
+  name: string;
+  age: number;
+  etc?: boolean;
+} = { name: "Jack", age: 32 };
+
+// 함수에 사용된 익명 인터페이스 예
+
+function printMe(me: { name: string; age: number; etc?: boolean }) {
+  console.log(
+    me.etc ? `${me.name} ${me.age} ${me.etc}` : `${me.name} ${me.age}`
+  );
+}
+
+printMe(ai);
