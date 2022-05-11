@@ -28,3 +28,14 @@ let addFn3 = function (a: number, b: number) {
 addFn3 = function (a: number, b: number) {
   return a - b;
 };
+
+/*
+ *  함수 호출 연산자
+ */
+
+// () 연산자로 함수 호출
+
+let functionExpression = function (a: number, b: number) {
+  return a + b;
+};
+let value = functionExpression(1, 2);
