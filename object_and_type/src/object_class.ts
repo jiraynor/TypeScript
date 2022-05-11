@@ -81,3 +81,21 @@ abstract class AbstractPerson5 {
   abstract name: string;
   constructor(public age?: number) {}
 }
+
+/*
+ *  클래스 상속
+ */
+
+// extends : 상속할 인터페이스 상속
+
+// class 상속 클래스 extends 부모 클래스 { ... }
+// super : 부모 클래스의 생성자
+
+class Person5 extends AbstractPerson5 {
+  constructor(public name: string, age?: number) {
+    super(age);
+  }
+}
+
+let jack5: Person5 = new Person5('Jack', 32);
+console.log(jack5);
