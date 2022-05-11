@@ -11,3 +11,13 @@
 function add(a: number, b: number): number {
   return a + b;
 }
+
+/*
+ *  void 타입
+ */
+
+// 값을 반환하지 않는 함수의 반환 타입
+
+function printMe(name: string, age: number): void {
+  console.log(`name: ${name}, age: ${age}`);
+}
