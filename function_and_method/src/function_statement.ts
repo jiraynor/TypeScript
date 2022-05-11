@@ -71,3 +71,18 @@ function getName(o: INameable | null | undefined) {
 let n = getName(undefined);
 console.log(n);
 console.log(getName({ name: "Jack" }));
+
+/*
+ *  선택적 매개 변수
+ */
+
+// 선택 속성과 비슷한 맥락
+
+// function fn(arg0: string, arg?: number): void {}
+
+function fn(arg0: string, arg?: number) {
+  console.log(`arg: ${arg}`);
+}
+
+fn("hello", 1);
+fn("hello");
