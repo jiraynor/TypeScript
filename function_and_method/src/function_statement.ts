@@ -44,3 +44,30 @@ let printMe2: (arg0: string, arg1: number) => void = function (
 type stringNumberFunc = (arg0: string, arg1: number) => void;
 let f: stringNumberFunc = function (a: string, b: number): void {};
 let g: stringNumberFunc = function (c: string, d: number): void {};
+
+/*
+ *  undefined 주의 사항
+ */
+
+// undefined를 고려하지 않은 코드
+
+// interface INameable {
+//     name: string;
+// }
+// function getName(o: INameable) {return o.name}
+
+// let n = getName(undefined)  // t2345 오류 발생
+// console.log(n);
+
+// undefined를 고려한 코드
+
+interface INameable {
+  name: string;
+}
+function getName(o: INameable | null | undefined) {
+  return o != undefined ? o.name : "unknown name";
+}
+
+let n = getName(undefined);
+console.log(n);
+console.log(getName({ name: "Jack" }));
