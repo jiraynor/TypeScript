@@ -104,7 +104,7 @@ console.log(jack5);
  *  static 속성
  */
 
-// static : 정적 속성, 정적 메서드 정의 (static으로 선언된 것은 객체 생성 없이 사용가능)
+// static : 정적 속성 (static으로 선언된 것은 객체 생성 없이 사용가능)
 
 // class 클래스 이름 {
 //     static 정적 속성 이름: 속성 타입;
