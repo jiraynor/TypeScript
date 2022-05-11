@@ -59,3 +59,16 @@ let address: any = {
 
 const { country, city, ...detail } = address;
 console.log(detail);
+
+/*
+ *  전개 연산자
+ */
+
+// 비구조화가 아닌 코드에서 ... 연산자를 이용하면 전개 연산자라 하며 객체의 속성을 '전개'하여 새로운 객체로 만듦
+
+let part1 = { name: 'jane' },
+  part2 = { age: 22 },
+  part3 = { city: 'Seoul', country: 'Kr' };
+
+let merged = { ...part1, ...part2, ...part3 };
+console.log(merged);
