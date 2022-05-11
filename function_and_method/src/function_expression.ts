@@ -51,3 +51,12 @@ let value2 = (function (a: number, b: number) {
 })(1, 2);
 
 // 익명 함수 생성 후 함수 호출 연산자를 바로 불러 바로 실행 후 value2에 대입
+
+/*
+ *  const 키워드와 함수 표현식
+ */
+
+// 함수 표현식을 담는 변수는 값이 변할 수 없는 const로 선언하는 것이 바람직 함
+
+let letFn = () => {};
+let constFn = () => {};
