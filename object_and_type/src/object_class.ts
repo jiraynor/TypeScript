@@ -65,3 +65,19 @@ class Person4 implements IPerson4 {
 
 let jack4: IPerson4 = new Person4('Jack', 32);
 console.log(jack4);
+
+/*
+ *  추상 클래스
+ */
+
+// abstract : 추상화 할 클래스, 속성 혹은 메서드 정의
+
+// abstract class 클래스 이름 {
+//     abstract 속성 이름: 속성 타입;
+//     abstract 메서드 이름() {}
+// }
+
+abstract class AbstractPerson5 {
+  abstract name: string;
+  constructor(public age?: number) {}
+}
