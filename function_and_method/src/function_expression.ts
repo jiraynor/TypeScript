@@ -39,3 +39,15 @@ let functionExpression = function (a: number, b: number) {
   return a + b;
 };
 let value = functionExpression(1, 2);
+
+/*
+ *  익명 함수
+ */
+
+// 함수 표현식 = 익명 함수
+
+let value2 = (function (a: number, b: number) {
+  return a + b;
+})(1, 2);
+
+// 익명 함수 생성 후 함수 호출 연산자를 바로 불러 바로 실행 후 value2에 대입
