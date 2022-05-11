@@ -42,3 +42,20 @@ let samsung: ICompany = { name: 'samsung', age: 43 },
 
 let { name, age } = jack;
 console.log(name, age);
+
+/*
+ *  잔여 연산자
+ */
+
+// 비구조화에서 ... 연산자를 이용하여 비구조화에서 제외된 나머지 속성을 가져옴
+
+let address: any = {
+  country: 'Korea',
+  city: 'Seoul',
+  address1: 'Gangnam-gu',
+  address2: 'Sinsa-dong 123-456',
+  address3: '789 street, 2 Floor ABC building'
+};
+
+const { country, city, ...detail } = address;
+console.log(detail);
