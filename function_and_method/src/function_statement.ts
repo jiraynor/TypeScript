@@ -28,7 +28,19 @@ function printMe(name: string, age: number): void {
 
 // 함수의 타입
 
-let printMe2: (name: string, age: number) => void = function (
+let printMe2: (arg0: string, arg1: number) => void = function (
   name: string,
   age: number
 ): void {};
+
+/*
+ *  타입 별칭
+ */
+
+// type alias : type 키워드를 이용해 별칭 생성
+
+// type 새로운 타입 = 기존 타입
+
+type stringNumberFunc = (arg0: string, arg1: number) => void;
+let f: stringNumberFunc = function (a: string, b: number): void {};
+let g: stringNumberFunc = function (c: string, d: number): void {};
