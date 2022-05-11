@@ -15,3 +15,16 @@ let addFn2 = function (a: number, b: number) {
 };
 
 console.log(addFn2(1, 2));
+
+/*
+ *  일등 함수
+ */
+
+// 일등 함수 : 함수와 변수를 구분하지 않음
+
+let addFn3 = function (a: number, b: number) {
+  return a + b;
+};
+addFn3 = function (a: number, b: number) {
+  return a - b;
+};
