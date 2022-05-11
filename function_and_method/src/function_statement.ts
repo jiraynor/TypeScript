@@ -21,3 +21,14 @@ function add(a: number, b: number): number {
 function printMe(name: string, age: number): void {
   console.log(`name: ${name}, age: ${age}`);
 }
+
+/*
+ *  함수 시그니처
+ */
+
+// 함수의 타입
+
+let printMe2: (name: string, age: number) => void = function (
+  name: string,
+  age: number
+): void {};
