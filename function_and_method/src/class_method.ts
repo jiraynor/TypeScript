@@ -35,3 +35,24 @@ class B {
 
 let b: B = new B(2);
 b.method();
+
+/*
+ *  정적 메서드
+ */
+
+// static 수정자를 속성 앞에 붙여 정적 메서드 정의
+
+class C {
+  static whoAreYou(): string {
+    return `I am class C`;
+  }
+}
+
+class D {
+  static whoAreYou(): string {
+    return `I am class D`;
+  }
+}
+
+console.log(C.whoAreYou());
+console.log(D.whoAreYou());
