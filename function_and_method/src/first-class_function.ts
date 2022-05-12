@@ -31,3 +31,39 @@ const calc = (value: number, cb: (arg: number) => void): void => {
 };
 
 calc(30, (result: number) => console.log(`result is ${result}`));
+
+/*
+ *  고차 함수와 클로저, 부분 함수
+ */
+
+const add1 = (a: number, b: number): number => a + b; // 보통 함수
+const add2 =
+  (a: number): ((arg: number) => number) =>
+  (b: number): number =>
+    a + b; // 고차 함수
+
+const result2 = add2(1)(2);
+
+// 쉬운 표현
+
+type NumberToNumberFunc = (arg: number) => number;
+
+const add3 = (a: number): NumberToNumberFunc => {
+  const _add: NumberToNumberFunc = (b: number): number => {
+    return a + b; // 클로저
+  };
+  return _add;
+};
+
+let fn3: NumberToNumberFunc = add3(1);
+
+let result3 = fn3(2);
+console.log(result3); // 3
+console.log(add3(1)(2)); // 3
+
+const multiply2 = (a: number) => (b: number) => (c: number) => a * b * c;
+multiply2(1)(2)(3);
+
+// 부분 함수 : 값이 완성되지 않은 함수
+multiply2(1);
+multiply2(1)(2);
