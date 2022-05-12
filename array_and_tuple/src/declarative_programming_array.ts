@@ -74,6 +74,7 @@ console.log(oddSum);
  *  filter: 조건에 맞는 아이템만 추려내기
  */
 
+// 선언형 프로그래밍
 // 조건에 맞는 값만 추려내는 기능
 
 const filter = <T>(
@@ -88,10 +89,29 @@ const filter = <T>(
   return result;
 };
 
-const isOdd = (n: number): boolean => n % 2 != 0;
+const isOdd = (n: number): boolean => n % 2 !== 0;
 const result3 = fold(
   filter(numbers4, isOdd),
   (result, value) => result + value,
   0
 );
 console.log(result3);
+
+/*
+ *  1에서 100까지 짝수의 합 구하기
+ */
+
+// 명령형 프로그래밍
+
+let evenSum = 0;
+for (let val = 0; val <= 100; val += 2) evenSum += val;
+console.log(evenSum);
+
+// 선언형 프로그래밍
+const isEven = (n: number): boolean => n % 2 === 0;
+const result4 = fold(
+  filter(numbers4, isEven),
+  (result, value) => result + value,
+  0
+);
+console.log(result4);
