@@ -117,3 +117,27 @@ for (let i in names) {
 // }
 
 for (let name of names) console.log(name);
+
+/*
+ *  제네릭 방식 타입
+ */
+
+// 타입을 고정시키지않고 T와 같은 일종의 변수로 취급하는 것
+
+const arrayLength = <T>(array: T[]): number => array.length;
+const isEmpty = <T>(array: T[]): boolean => arrayLength<T>(array) === 0;
+
+const numArray: number[] = [1, 2, 3];
+const strArray2: string[] = ["Hello", "World"];
+
+type IPerson2 = { name: string; age?: number };
+
+const personArray2: IPerson2[] = [{ name: "Jack" }, { name: "Jane", age: 32 }];
+
+console.log(
+  arrayLength(numArray),
+  arrayLength(strArray2),
+  arrayLength(personArray2),
+  isEmpty([]),
+  isEmpty([1])
+);
