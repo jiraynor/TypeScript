@@ -163,3 +163,15 @@ const array4: number[] = [2, 3];
 const mergedArray: number[] = [...array3, ...array4, 4];
 
 console.log(mergedArray);
+
+/*
+ *  range 함수 구현
+ */
+
+// 전개 연산자를 사용하여 ramda 외부 패키지의 range 구현
+
+const range = (from: number, to: number): number[] =>
+  from < to ? [from, ...range(from + 1, to)] : [];
+
+const numbers3: number[] = range(1, 9 + 1);
+console.log(numbers3);
