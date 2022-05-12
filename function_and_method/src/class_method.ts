@@ -19,3 +19,19 @@ class A {
 
 let a: A = new A();
 a.method();
+
+/*
+ *  클래스 메서드 구문
+ */
+
+// 타입스크립트는 함수 표현식을 탐는 속성은 function 키워드를 생략할 수 있게하는 단축 구문을 제공
+
+class B {
+  constructor(public value: number = 1) {}
+  method(): void {
+    console.log(`value: ${this.value}`);
+  }
+}
+
+let b: B = new B(2);
+b.method();
