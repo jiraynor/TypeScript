@@ -34,7 +34,7 @@ console.log(sum);
 // 선언형 프로그래밍
 
 let numbers4: number[] = range(1, 100 + 1); // array.ts에서 선언한 range
-console.log(numbers);
+console.log(numbers4);
 
 // 선언형에서는 fold 함수를 사용해야 함
 
@@ -69,3 +69,29 @@ console.log(result2);
 let oddSum = 0;
 for (let val = 1; val <= 100; val += 2) oddSum += val;
 console.log(oddSum);
+
+/*
+ *  filter: 조건에 맞는 아이템만 추려내기
+ */
+
+// 조건에 맞는 값만 추려내는 기능
+
+const filter = <T>(
+  array: T[],
+  callback: (value: T, index?: number) => boolean
+): T[] => {
+  let result: T[] = [];
+  for (let i: number = 0; i < array.length; ++i) {
+    const value = array[i];
+    if (callback(value, i)) result = [...result, value];
+  }
+  return result;
+};
+
+const isOdd = (n: number): boolean => n % 2 != 0;
+const result3 = fold(
+  filter(numbers4, isOdd),
+  (result, value) => result + value,
+  0
+);
+console.log(result3);
