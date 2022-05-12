@@ -59,3 +59,13 @@ const fold = <T>(
 
 let result2 = fold(numbers4, (result, value) => result + value, 0);
 console.log(result2);
+
+/*
+ *  1에서 100까지 홀수의 합 구하기
+ */
+
+// 명령형 프로그래밍
+
+let oddSum = 0;
+for (let val = 1; val <= 100; val += 2) oddSum += val;
+console.log(oddSum);
