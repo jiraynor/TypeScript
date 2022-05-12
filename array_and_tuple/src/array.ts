@@ -80,3 +80,11 @@ for (let i = 0; i < numbers2.length; i++) {
   const item: number = numbers2[i];
   console.log(item);
 }
+
+/*
+ *  배열의 비구조화 할당
+ */
+
+const array2: number[] = [1, 2, 3, 4, 5];
+const [first, second, third, ...rest] = array2;
+console.log(first, second, third, rest);
