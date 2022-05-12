@@ -88,3 +88,20 @@ for (let i = 0; i < numbers2.length; i++) {
 const array2: number[] = [1, 2, 3, 4, 5];
 const [first, second, third, ...rest] = array2;
 console.log(first, second, third, rest);
+
+/*
+ *  for...in 문
+ */
+
+// for...in 문은 보통 객체를 대상으로 하지만 배열 또한 객체이기 때문에 사용 가능 - 키값(인덱스)를 반환
+
+// for(변수 in 객체) {
+//     ...
+// }
+
+const names = ["Jack", "Jane", "Steve"];
+
+for (let i in names) {
+  const name = names[i];
+  console.log(`[${i}]: ${name}`);
+}
