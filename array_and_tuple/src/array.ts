@@ -141,3 +141,12 @@ console.log(
   isEmpty([]),
   isEmpty([1])
 );
+
+/*
+ *  제네릭 함수의 타입 추론
+ */
+
+// 타입 변수가 생략된 제네릭 함수를 만나면 타입 추론을 통해 생략된 타입을 찾아냄
+
+const identity = <T>(n: T): T => n;
+console.log(identity<boolean>(true), identity(true));
