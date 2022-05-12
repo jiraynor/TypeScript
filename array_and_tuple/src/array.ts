@@ -43,3 +43,28 @@ const strArray: string[] = ["Hello", "World"];
 
 type IPerson = { name: string; age?: number };
 const personArray: IPerson[] = [{ name: "Jack" }, { name: "Jane", age: 32 }];
+
+/*
+ *  문자열과 배열 간 변환
+ */
+
+// 타입스크립트는 문자 타입이 따로 존재하지 않아 문자열을 문자의 배열로 인식하지 않음
+// 문자열을 가공하려면 String 클래스의 split 메서드를 사용해 문자열을 배열로 전환해야 함
+
+// split(구분자: string): string[]
+
+const split = (str: string, delim: string = ""): string[] => str.split(delim);
+
+console.log(split("hello"), split("h_e_l_l_o", "_"));
+
+// string[] 타입의 배열을 다시 string으로 변환하기 위해 Array 클래스의 join 메서드 사용
+
+// join(구분자: string): string
+
+const join = (strArray: string[], delim: string = ""): string =>
+  strArray.join(delim);
+
+console.log(
+  join(["h", "e", "l", "l", "o"]),
+  join(["h", "e", "l", "l", "o"], "_")
+);
