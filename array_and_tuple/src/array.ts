@@ -95,7 +95,7 @@ console.log(first, second, third, rest);
 
 // for...in 문은 보통 객체를 대상으로 하지만 배열 또한 객체이기 때문에 사용 가능 - 키값(인덱스)를 반환
 
-// for(변수 in 객체) {
+// for(let 변수 in 객체) {
 //     ...
 // }
 
@@ -105,3 +105,15 @@ for (let i in names) {
   const name = names[i];
   console.log(`[${i}]: ${name}`);
 }
+
+/*
+ *  for...of 문
+ */
+
+// for...in과는 다르게 아이템을 반환
+
+// for(let 변수 of 객체) {
+//   ...
+// }
+
+for (let name of names) console.log(name);
