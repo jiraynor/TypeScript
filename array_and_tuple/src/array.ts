@@ -68,3 +68,15 @@ console.log(
   join(["h", "e", "l", "l", "o"]),
   join(["h", "e", "l", "l", "o"], "_")
 );
+
+/*
+ *  인덱스 연산자
+ */
+
+// [인덱스] : 배열이 담고 있는 아이템 중 특정 위치에 있는 아이템을 얻고자 할 때 사용
+
+const numbers2: number[] = [1, 2, 3, 4, 5];
+for (let i = 0; i < numbers2.length; i++) {
+  const item: number = numbers2[i];
+  console.log(item);
+}
