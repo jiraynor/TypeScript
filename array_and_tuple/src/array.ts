@@ -150,3 +150,16 @@ console.log(
 
 const identity = <T>(n: T): T => n;
 console.log(identity<boolean>(true), identity(true));
+
+/*
+ *  전개 연산자
+ */
+
+// 전개 연산자를 사용해 두 배열과 특정 값을 동시에 결합할 수 있음
+
+const array3: number[] = [1];
+const array4: number[] = [2, 3];
+
+const mergedArray: number[] = [...array3, ...array4, 4];
+
+console.log(mergedArray);
