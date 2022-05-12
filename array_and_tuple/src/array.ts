@@ -20,3 +20,14 @@ console.log(array);
 let numbers = [1, 2, 3];
 let strings = ["Hello", "World"];
 console.log(numbers, strings);
+
+/*
+ *  배열 = 객체
+ */
+
+// 배열은 Array 클래스의 인스턴스
+// 배열은 객체이기 때문에 메서드 사용 가능
+
+let a = [1, 2, 3];
+let o = { name: "Jack", age: 32 };
+console.log(Array.isArray(a), Array.isArray(o));
