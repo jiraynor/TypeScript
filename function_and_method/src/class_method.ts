@@ -56,3 +56,26 @@ class D {
 
 console.log(C.whoAreYou());
 console.log(D.whoAreYou());
+
+/*
+ *  메서드 체인
+ */
+
+// 메서드 체인: 메서드를 계속 호출하는 방식
+// 타입스크립트로 메서드 체인을 구현하려면 메서드가 항상 this를 반환해야 함
+
+class Calculator {
+  constructor(public value: number = 0) {}
+  add(value: number) {
+    this.value += value;
+    return this;
+  }
+  multiply(value: number) {
+    this.value *= value;
+    return this;
+  }
+}
+
+let calc2 = new Calculator();
+let result4 = calc2.add(1).add(2).multiply(3).multiply(4).value;
+console.log(result4);
