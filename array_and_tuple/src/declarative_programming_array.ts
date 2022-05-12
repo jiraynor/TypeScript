@@ -37,3 +37,25 @@ let numbers4: number[] = range(1, 100 + 1); // array.ts에서 선언한 range
 console.log(numbers);
 
 // 선언형에서는 fold 함수를 사용해야 함
+
+/*
+ *  fold: 배열 데이터 접기
+ */
+
+// fold 함수는 T[] 타입 배열을 가공해 T 타입 결과를 만들어 줌
+
+const fold = <T>(
+  array: T[],
+  callback: (result: T, val: T) => T,
+  initValue: T
+) => {
+  let result: T = initValue;
+  for (let i = 0; i < array.length; ++i) {
+    const value = array[i];
+    result = callback(result, value);
+  }
+  return result;
+};
+
+let result2 = fold(numbers4, (result, value) => result + value, 0);
+console.log(result2);
