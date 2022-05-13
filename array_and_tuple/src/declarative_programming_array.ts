@@ -115,3 +115,13 @@ const result4 = fold(
   0
 );
 console.log(result4);
+
+/*
+ *  1^2 + 2^2 + ... + 100^2 구하기
+ */
+
+// 명령형 프로그래밍
+
+let squareSum = 0;
+for (let val = 1; val <= 100; ++val) squareSum += val * val;
+console.log(squareSum);
