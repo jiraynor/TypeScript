@@ -125,3 +125,29 @@ console.log(result4);
 let squareSum = 0;
 for (let val = 1; val <= 100; ++val) squareSum += val * val;
 console.log(squareSum);
+
+/*
+ *  map: 배열 데이터 가공
+ */
+
+// 어떤 값을 또 다른 값으로 만들어 주는 기능
+
+const map = <T, Q>(
+  array: T[],
+  callback: (value: T, index?: number) => Q
+): Q[] => {
+  let result: Q[] = [];
+  for (let i = 0; i < array.length; ++i) {
+    const value = array[i];
+    result = [...result, callback(value, i)];
+  }
+  return result;
+};
+
+let result5 = fold(
+  map(numbers4, (value) => value * value),
+  (result, value) => result + value,
+  0
+);
+
+console.log(result5);
